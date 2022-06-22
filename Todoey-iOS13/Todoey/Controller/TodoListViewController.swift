@@ -62,7 +62,6 @@ class TodoListViewController: UITableViewController {
         }
         
         let action = UIAlertAction(title: "Add item", style: .default) { (action) in
-            
             let newItem = Entity(context: self.context)
             newItem.taskName = textFromAlertTextField.text!
             newItem.complated = false
@@ -94,7 +93,6 @@ class TodoListViewController: UITableViewController {
         } catch {
             print(error)
         }
-        
     }
 }
 
@@ -127,7 +125,6 @@ extension TodoListViewController: UISearchBarDelegate {
         
         loadItem(request: request)
     }
-    
 }
 
 
