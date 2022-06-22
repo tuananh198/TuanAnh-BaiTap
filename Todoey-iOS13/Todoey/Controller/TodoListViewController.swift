@@ -11,6 +11,7 @@ import CoreData
 
 class TodoListViewController: UITableViewController {
     
+    @IBOutlet weak var mySearchBar: UISearchBar!
     var itemArray = [Entity]()
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -19,6 +20,7 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
+        mySearchBar.delegate = self
         print(dataFilePath)
         loadItem()
     }
@@ -83,14 +85,49 @@ class TodoListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func loadItem() {
-        let request: NSFetchRequest<Entity> = Entity.fetchRequest()
+    func loadItem(request: NSFetchRequest<Entity> = Entity.fetchRequest()) {
         do {
-        itemArray = try context.fetch(request)
+            itemArray = try context.fetch(request)
+            if itemArray.count == 0 {
+                
+            }
         } catch {
             print(error)
         }
         
     }
 }
+
+extension TodoListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text != "" {
+            searchInput(input: searchBar.text!)
+        }
+        tableView.reloadData()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //print(searchText)
+        if searchText != "" {
+            searchInput(input: searchText)
+        } else {
+            loadItem()
+        }
+        tableView.reloadData()
+    }
+    
+    func searchInput(input: String) {
+        
+        let request: NSFetchRequest<Entity> = Entity.fetchRequest()
+        
+        let predicate = NSPredicate(format: "taskName CONTAINS[cd] %@", input)
+
+        request.predicate = predicate
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "taskName", ascending: true)]
+        
+        loadItem(request: request)
+    }
+    
+}
+
 
