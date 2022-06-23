@@ -19,6 +19,7 @@ extension Entity {
 
     @NSManaged public var taskName: String?
     @NSManaged public var complated: Bool
+    @NSManaged public var parentCategory: Category?
 
 }
 

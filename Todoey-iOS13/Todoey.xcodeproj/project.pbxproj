@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4BCC1328632068006E0DBB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BCC1228632068006E0DBB /* CategoryViewController.swift */; };
+		4B4BCC1A28632C2E006E0DBB /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BCC1828632C2E006E0DBB /* Category+CoreDataClass.swift */; };
+		4B4BCC1B28632C2E006E0DBB /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BCC1928632C2E006E0DBB /* Category+CoreDataProperties.swift */; };
 		4BE07DA52861B88A00D1BA62 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE07DA42861B88A00D1BA62 /* DataModel.swift */; };
 		4BE07DAD2861CEE900D1BA62 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BE07DAB2861CEE900D1BA62 /* DataModel.xcdatamodeld */; };
 		4BE07DB02861DFA500D1BA62 /* Entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE07DAE2861DFA500D1BA62 /* Entity+CoreDataClass.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B4BCC1228632068006E0DBB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4B4BCC1828632C2E006E0DBB /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "Todoey/Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B4BCC1928632C2E006E0DBB /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "Todoey/Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BE07DA42861B88A00D1BA62 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4BE07DAC2861CEE900D1BA62 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4BE07DAE2861DFA500D1BA62 /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataClass.swift"; path = "Todoey/Entity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 		4BE07DA92861BD9D00D1BA62 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4B4BCC1228632068006E0DBB /* CategoryViewController.swift */,
 				EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */,
 			);
 			path = Controller;
@@ -71,6 +78,8 @@
 		4BE07DB22861DFBB00D1BA62 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				4B4BCC1928632C2E006E0DBB /* Category+CoreDataProperties.swift */,
+				4B4BCC1828632C2E006E0DBB /* Category+CoreDataClass.swift */,
 				4BE07DAE2861DFA500D1BA62 /* Entity+CoreDataClass.swift */,
 				4BE07DAF2861DFA500D1BA62 /* Entity+CoreDataProperties.swift */,
 			);
@@ -180,7 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BE07DB12861DFA500D1BA62 /* Entity+CoreDataProperties.swift in Sources */,
+				4B4BCC1B28632C2E006E0DBB /* Category+CoreDataProperties.swift in Sources */,
+				4B4BCC1A28632C2E006E0DBB /* Category+CoreDataClass.swift in Sources */,
 				EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */,
+				4B4BCC1328632068006E0DBB /* CategoryViewController.swift in Sources */,
 				4BE07DAD2861CEE900D1BA62 /* DataModel.xcdatamodeld in Sources */,
 				EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */,
 				4BE07DB02861DFA500D1BA62 /* Entity+CoreDataClass.swift in Sources */,
